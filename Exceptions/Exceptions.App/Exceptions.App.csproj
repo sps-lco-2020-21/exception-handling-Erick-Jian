@@ -54,6 +54,10 @@
       <Project>{c644b949-b98a-4720-8931-8094c32d42e3}</Project>
       <Name>Exceptions.Lib</Name>
     </ProjectReference>
+    <ProjectReference Include="..\Exceptions.Tests\Exceptions.Tests.csproj">
+      <Project>{d7651c10-ef39-4034-825b-5b8712300687}</Project>
+      <Name>Exceptions.Tests</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
