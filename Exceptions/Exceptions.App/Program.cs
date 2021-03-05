@@ -15,7 +15,7 @@ namespace Exceptions.App
         ///         convert values of one type to values of another type.
         ///     Read the official docs for System.Convert.ToDouble.There are several overloads of the ToDouble method. 
         ///         Which exceptions can occur by converting a string to a double?
-        ///     Write a Console.App which triggers these exceptions.
+        ///     Write a Console.App which triggers   these exceptions.
         ///     Finally, supply handlers of the exceptions. The handlers should report the problem on the Console 
         ///         and then continue. 
         /// Extend Triangle
@@ -48,7 +48,7 @@ namespace Exceptions.App
             ///         value represents a number that is less than MinValue or greater than MaxValue.
 
             int testvalue1 = 1;
-            char testvalue2 = '2';
+            DateTime testvalue2 = DateTime.Now;     // Datetime is somehow a double (fraction: time of the day)
             int supermegalargenumber = (int)Math.Pow(11, 308);
 
             Console.WriteLine("Which type of Exception? [ Format | Casting | Overflow ]:  ");
@@ -60,7 +60,7 @@ namespace Exceptions.App
                     try
                     { return Convert.ToDouble(testvalue1); }
                     catch (FormatException FE)
-                    { Console.WriteLine($"Exception is known as {FE}"); }
+                    { Console.WriteLine($"Exception is known as {FE.Message}"); }
                     finally
                     { Console.WriteLine("I will convert it into a double for you"); }
                     break;
@@ -68,7 +68,11 @@ namespace Exceptions.App
                     try
                     { Convert.ToDouble(testvalue2); }
                     catch (InvalidCastException ICE)
-                    { Console.WriteLine($"Exception is known as {ICE}"); }
+                    { Console.WriteLine($"Exception is known as {ICE.Message}"); }
+                    catch (Exception e)
+                    {
+                        Console.WriteLine(e.Message);
+                    }
                     finally
                     { Console.WriteLine("I will convert into a double for you"); }
                     break;
@@ -118,5 +122,13 @@ namespace Exceptions.App
             }
 
         }
+    }
+    public class TriangleExceptions : Exception  // inherits from exception
+    {
+        /// Extend Triangle
+        ///     Revisit your Triangle class from way back when. 
+        ///     Create a TriangleException class and, instead of having a IsValid property return false, 
+        ///         validate the data in the constructor and the setters to forbid illegal triangles being generated.
+
     }
 }
