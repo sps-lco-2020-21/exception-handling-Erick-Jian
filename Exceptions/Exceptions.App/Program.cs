@@ -18,21 +18,17 @@ namespace Exceptions.App
         ///     Write a Console.App which triggers   these exceptions.
         ///     Finally, supply handlers of the exceptions. The handlers should report the problem on the Console 
         ///         and then continue. 
-        /// Extend Triangle
-        ///     Revisit your Triangle class from way back when. 
-        ///     Create a TriangleException class and, instead of having a IsValid property return false, 
-        ///         validate the data in the constructor and the setters to forbid illegal triangles being generated.
         /// </summary>
 
         static void Main(string[] args)
         {
-            Trigger_Exceptions();
+            //Trigger_Exceptions();
             
-            //Division(25, 5);
-            //Division(25, 0);
+            Division(25, 5);
+            Division(25, 0);
 
-            //SetExamScore(-2, 72);
-            //SetExamScore(5, 0);
+            SetExamScore(-2, 72);
+            SetExamScore(5, 0);
 
             Console.ReadKey();
         }
@@ -120,15 +116,6 @@ namespace Exceptions.App
             {
                 Console.WriteLine("Invalid score: {0}", ese.Message);
             }
-
         }
-    }
-    public class TriangleExceptions : Exception  // inherits from exception
-    {
-        /// Extend Triangle
-        ///     Revisit your Triangle class from way back when. 
-        ///     Create a TriangleException class and, instead of having a IsValid property return false, 
-        ///         validate the data in the constructor and the setters to forbid illegal triangles being generated.
-
     }
 }

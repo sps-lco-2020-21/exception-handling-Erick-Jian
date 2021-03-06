@@ -49,5 +49,11 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\TriangleExceptions.Lib\TriangleExceptions.Lib\TriangleExceptions.Lib.csproj">
+      <Project>{dda556c3-57f8-4dca-b37e-39284c678c8d}</Project>
+      <Name>TriangleExceptions.Lib</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -1,10 +1,10 @@
 ﻿using System;
-using TriangleExceptions;
 using System.Diagnostics;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using TriangleExceptions.Lib;
 
 namespace TriangleExceptionApp.App
 {
